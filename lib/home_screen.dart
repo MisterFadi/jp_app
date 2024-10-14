@@ -44,14 +44,14 @@ class HomeScreen extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(30),
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+                filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
                 child: Container(
                   height: 210,
                   width: 330,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.white, width: 0.2),
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.white.withOpacity(0.1),
+                    color: Colors.white.withOpacity(0.005),
                   ),
                   child: const Padding(
                     padding: EdgeInsets.all(16.0),

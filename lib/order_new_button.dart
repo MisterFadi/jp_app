@@ -9,15 +9,15 @@ class OrderNowButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ChooseScreen()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ChooseScreen()));
       },
       child: Container(
         decoration: BoxDecoration(
             boxShadow: const [
               BoxShadow(
-                color: Color.fromARGB(255, 249, 123, 165),
-                blurRadius: 15,
+                color: Color.fromARGB(255, 248, 150, 183),
+                blurRadius: 10,
                 offset: Offset(1, 4), // Shadow position
               ),
             ],
