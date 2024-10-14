@@ -17,3 +17,16 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/background/bg_startscreen.png
+    - assets/background/bg_mainscreen.png
+    - assets/grafiken/Burger_3D.png
+    - assets/grafiken/cat_cupcakes_3D.png
+    - assets/grafiken/chick_cupcakes_3D.png
+    - assets/grafiken/ice_cream_stick_3D.png
+    - assets/grafiken/ice.cream.png
+    - assets/grafiken/icecream_3D.png
+    - assets/grafiken/star.png
+    - assets/details/T2.png
+    - assets/details/Top_Card.png
+
