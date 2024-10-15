@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -26,7 +27,7 @@ flutter:
     - assets/grafiken/ice_cream_stick_3D.png
     - assets/grafiken/ice.cream.png
     - assets/grafiken/icecream_3D.png
-    - assets/grafiken/star.png
+    - assets/extra/star.png
     - assets/details/T2.png
     - assets/details/Top_Card.png
 
