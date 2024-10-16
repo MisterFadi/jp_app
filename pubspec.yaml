@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  horizontal_list_view: ^1.1.0
+
 
 
 dev_dependencies:
