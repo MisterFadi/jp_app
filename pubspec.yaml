@@ -7,6 +7,7 @@ environment:
   sdk: ^3.5.2
 
 dependencies:
+  counter_button: ^1.0.1
   flutter:
     sdk: flutter
   horizontal_list_view: ^1.1.0
@@ -27,7 +28,7 @@ flutter:
     - assets/grafiken/cat_cupcakes_3D.png
     - assets/grafiken/chick_cupcakes_3D.png
     - assets/grafiken/ice_cream_stick_3D.png
-    - assets/grafiken/ice.cream.png
+    - assets/grafiken/ice_cream.png
     - assets/grafiken/icecream_3D.png
     - assets/extra/star.png
     - assets/details/T2.png

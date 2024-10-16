@@ -2,7 +2,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:jp_app/buttons/order_now_button.dart';
+import 'package:jp_app/buttons/add_to_order_price_button%20.dart';
 import 'package:jp_app/models/grafiken_item_class.dart';
 
 class DrawerScreen extends StatelessWidget {
@@ -30,8 +30,8 @@ class DrawerScreen extends StatelessWidget {
           left: 70,
           child: Transform.scale(
             scale: 1.5,
-            child: const Image(
-              image: AssetImage("assets/grafiken/cat_cupcakes_3D.png"),
+            child: Image(
+              image: AssetImage(grafikenItem.imagePath),
             ),
           ),
         ),
@@ -50,50 +50,124 @@ class DrawerScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.white.withOpacity(0.005),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.all(16.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text("addsfdsfds"),
-                      SizedBox(height: 2),
+                      Text(grafikenItem.imageLikes),
+                      const SizedBox(height: 2),
                       Text(
-                        "Mogli´s Cup",
-                        style: TextStyle(
+                        grafikenItem.imageTitle,
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontSize: 25,
                         ),
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       Text(
-                        "Explore Angi's most popular snack selection \n and get instantly happy.",
+                        grafikenItem.imageDescription,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 12,
                             fontWeight: FontWeight.w400),
                       ),
-                      SizedBox(height: 30),
+                      const SizedBox(height: 30),
                       Text(
-                        "₳ 8.99",
+                        grafikenItem.imagePrice,
                         textAlign: TextAlign.start,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                             fontWeight: FontWeight.w400),
                       ),
-                      SizedBox(height: 30),
-                      Divider(
+                      const SizedBox(height: 30),
+                      const Divider(
                         thickness: 0.5,
                       ),
-                      SizedBox(height: 30),
-                      OrderNowButton(),
+                      const SizedBox(height: 10),
+                      const Row(
+                        children: [
+                          Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Ingredients",
+                                    style: TextStyle(color: Colors.white)),
+                                SizedBox(height: 8),
+                                Row(
+                                  children: [
+                                    Icon(Icons.abc, color: Colors.white),
+                                    SizedBox(width: 4),
+                                    Icon(Icons.abc, color: Colors.white),
+                                    SizedBox(width: 4),
+                                    Icon(Icons.abc, color: Colors.white),
+                                    SizedBox(width: 4),
+                                    Icon(Icons.abc, color: Colors.white)
+                                  ],
+                                )
+                              ]),
+                          Expanded(child: SizedBox()),
+                          Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Reviews",
+                                    style: TextStyle(color: Colors.white)),
+                                SizedBox(height: 8),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                    SizedBox(width: 2),
+                                    Icon(Icons.star,
+                                        color: Colors.white, size: 16),
+                                    SizedBox(width: 2),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                    SizedBox(width: 2),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                    SizedBox(width: 2),
+                                    Icon(
+                                      Icons.star_outline,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                    SizedBox(width: 16),
+                                    Text(
+                                      "4.0",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 14),
+                                    )
+                                  ],
+                                )
+                              ]),
+                        ],
+                      )
                     ],
                   ),
                 ),
               ),
             ),
+          ),
+        ),
+
+        // const CounterButton(),
+        Positioned(
+          top: 640,
+          left: 50,
+          child: AddToOrderPriceButton(
+            onTap: () {},
           ),
         ),
       ],

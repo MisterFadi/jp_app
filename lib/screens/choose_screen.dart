@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jp_app/buttons/add_to_order_button.dart';
 import 'package:jp_app/repositories/grafiken_data.dart';
 import 'package:jp_app/screens/drawer_screen.dart';
+import 'package:jp_app/widget/all_categories_widget.dart';
 import 'package:jp_app/widget/cake_container_widget.dart';
 
 class ChooseScreen extends StatefulWidget {
@@ -14,10 +15,12 @@ class ChooseScreen extends StatefulWidget {
 }
 
 class _ChooseScreenState extends State<ChooseScreen> {
+  int index = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
+    return Material(
+      child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
           const Image(
@@ -36,6 +39,7 @@ class _ChooseScreenState extends State<ChooseScreen> {
               ),
             ),
           ),
+          const Positioned(top: 150, left: 10, child: AllCategoriesWidget()),
           Positioned(
             top: 230,
             left: 30,
@@ -87,17 +91,37 @@ class _ChooseScreenState extends State<ChooseScreen> {
                     left: 20,
                     child: AddToOrderButton(
                       onTap: () {
-                        showModalBottomSheet(
-                            context: context,
-                            isScrollControlled: true,
-                            builder: (context) =>
-                                DrawerScreen(grafikenItem: cakeData[3]));
+                        //   showModalBottomSheet(
+                        //       context: context,
+                        //       isScrollControlled: true,
+                        //       builder: (context) =>
+                        //           DrawerScreen(grafikenItem: cakeData[2]));
                       },
                     ),
                   ),
                 ],
               ),
             ),
+          ),
+          Positioned(
+            top: 243,
+            left: 315,
+            child: Transform.scale(
+              scale: 1.0,
+              child: const Image(
+                image: AssetImage("assets/extra/star.png"),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 240,
+            left: 330,
+            child: Transform.scale(
+                scale: 1.0,
+                child: const Text(
+                  "4.8",
+                  style: TextStyle(color: Colors.grey),
+                )),
           ),
           Positioned(
             top: 260,
@@ -110,58 +134,44 @@ class _ChooseScreenState extends State<ChooseScreen> {
             ),
           ),
           const Positioned(
-            top: 530,
-            left: 35,
+            top: 525,
+            left: 30,
             child: Text(
               "We Recommend",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
-                fontSize: 17,
+                fontSize: 16,
               ),
             ),
           ),
           Positioned(
-            top: 560,
-            left: 20,
-            child: ListView.builder(
-              itemCount: cakeData.length,
-              itemBuilder: (context, index) {
-                return CakeContainerWidget(
-                  onTap: () {
-                    showModalBottomSheet(
-                      context: context,
-                      isScrollControlled: true,
-                      builder: (context) =>
-                          DrawerScreen(grafikenItem: cakeData[index]),
+            top: 564,
+            left: 0,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: SizedBox(
+                width: 520,
+                height: 264,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: cakeData.length,
+                  itemBuilder: (context, index) {
+                    return CakeContainerWidget(
+                      onTap: () {
+                        showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+                          builder: (context) =>
+                              DrawerScreen(grafikenItem: cakeData[index]),
+                        );
+                      },
                     );
                   },
-                );
-              },
+                ),
+              ),
             ),
           ),
-          /*
-          Positioned(
-            top: 560,
-            left: 20,
-            child: CakeContainerWidget(
-              onTap: () {
-                showModalBottomSheet(
-                    context: context,
-                    isScrollControlled: true,
-                    builder: (context) => const DrawerScreen(
-                          title: '',
-                          subTitle: '',
-                          price: '',
-                          likes: '',
-                          description: '',
-                          ingredients: '',
-                          reviews: '',
-                        ));
-              },
-            ),
-          ),
-          */
         ],
       ),
     );

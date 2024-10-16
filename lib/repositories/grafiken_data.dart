@@ -8,20 +8,20 @@ List<GrafikenItem> cakeData = [
     imagePrice: "₳ 8.99",
     imageLikes: "200",
     imageDescription:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ",
     imageIngredients: "Lecker",
-    imageReviews: "5 Sterne",
+    imageReviews: "⭐️⭐️⭐️⭐️⭐️⭐️⭐️",
   ),
   GrafikenItem(
-    imagePath: "assets/grafiken/Ice.cream.png",
+    imagePath: "assets/grafiken/Ice_cream.png",
     imageTitle: "Balu´s Cup",
     imageSubTitle: "Strawberry ice cream",
     imagePrice: "₳ 8.99",
     imageLikes: "200",
     imageDescription:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. ",
     imageIngredients: "Lecker",
-    imageReviews: "5 Sterne",
+    imageReviews: "⭐️⭐️⭐️⭐️",
   ),
   GrafikenItem(
     imagePath: "assets/grafiken/Burger_3D.png",
@@ -30,9 +30,9 @@ List<GrafikenItem> cakeData = [
     imagePrice: "₳ 13.99",
     imageLikes: "30",
     imageDescription:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     imageIngredients: "Lecker",
-    imageReviews: "4 Sterne",
+    imageReviews: "⭐️⭐️⭐️⭐️⭐️⭐️",
   ),
   GrafikenItem(
     imagePath: "assets/grafiken/ice_cream_stick_3D.png",
@@ -41,9 +41,9 @@ List<GrafikenItem> cakeData = [
     imagePrice: "₳ 3.99",
     imageLikes: "200",
     imageDescription:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     imageIngredients: "Lecker",
-    imageReviews: "5 Sterne",
+    imageReviews: "⭐️⭐️⭐️⭐️",
   ),
   GrafikenItem(
     imagePath: "assets/grafiken/chick_cupcakes_3D.png",
@@ -52,9 +52,9 @@ List<GrafikenItem> cakeData = [
     imagePrice: "₳ 4.99",
     imageLikes: "200",
     imageDescription:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     imageIngredients: "Lecker",
-    imageReviews: "5 Sterne",
+    imageReviews: "⭐️⭐️",
   ),
   GrafikenItem(
     imagePath: "assets/grafiken/Icecream_3D.png",
@@ -63,8 +63,8 @@ List<GrafikenItem> cakeData = [
     imagePrice: "₳ 8.99",
     imageLikes: "200",
     imageDescription:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     imageIngredients: "Lecker",
-    imageReviews: "5 Sterne",
-  ),
+    imageReviews: "⭐️⭐️⭐️⭐️⭐️⭐️",
+  )
 ];
