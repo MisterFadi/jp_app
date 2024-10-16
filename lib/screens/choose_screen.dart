@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:jp_app/buttons/add_to_order_button.dart';
+import 'package:jp_app/repositories/grafiken_data.dart';
+import 'package:jp_app/screens/drawer_screen.dart';
 import 'package:jp_app/widget/cake_container_widget.dart';
 
-class ChooseScreen extends StatelessWidget {
+class ChooseScreen extends StatefulWidget {
   const ChooseScreen({
     super.key,
   });
 
+  @override
+  State<ChooseScreen> createState() => _ChooseScreenState();
+}
+
+class _ChooseScreenState extends State<ChooseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,16 +47,16 @@ class ChooseScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
+          Positioned(
             top: 220,
             left: 30,
             child: Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     "Angi´s Yummy Burger",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -57,26 +64,37 @@ class ChooseScreen extends StatelessWidget {
                       fontSize: 15,
                     ),
                   ),
-                  SizedBox(height: 5),
-                  Text(
+                  const SizedBox(height: 5),
+                  const Text(
                     "Delish vegan burger \nthat tastes like heaven",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 10,
                         fontWeight: FontWeight.w400),
                   ),
-                  SizedBox(height: 10),
-                  Text(
-                    "₳ 8.99",
+                  const SizedBox(height: 10),
+                  const Text(
+                    "₳ 13.99",
                     textAlign: TextAlign.start,
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
                         fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 60),
-                  // -----             -- - - - - -- - - -- - - -- - - - - -- -- - - - - --- - - - - -actions:
-                  AddToOrderButton(),
+                  const SizedBox(height: 50),
+                  Positioned(
+                    top: 560,
+                    left: 20,
+                    child: AddToOrderButton(
+                      onTap: () {
+                        showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            builder: (context) =>
+                                DrawerScreen(grafikenItem: cakeData[3]));
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -103,7 +121,47 @@ class ChooseScreen extends StatelessWidget {
               ),
             ),
           ),
-          const CakeContainerWidget(),
+          Positioned(
+            top: 560,
+            left: 20,
+            child: ListView.builder(
+              itemCount: cakeData.length,
+              itemBuilder: (context, index) {
+                return CakeContainerWidget(
+                  onTap: () {
+                    showModalBottomSheet(
+                      context: context,
+                      isScrollControlled: true,
+                      builder: (context) =>
+                          DrawerScreen(grafikenItem: cakeData[index]),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+          /*
+          Positioned(
+            top: 560,
+            left: 20,
+            child: CakeContainerWidget(
+              onTap: () {
+                showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    builder: (context) => const DrawerScreen(
+                          title: '',
+                          subTitle: '',
+                          price: '',
+                          likes: '',
+                          description: '',
+                          ingredients: '',
+                          reviews: '',
+                        ));
+              },
+            ),
+          ),
+          */
         ],
       ),
     );

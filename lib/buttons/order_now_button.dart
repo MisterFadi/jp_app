@@ -5,6 +5,7 @@ class OrderNowButton extends StatelessWidget {
   const OrderNowButton({
     super.key,
   });
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
