@@ -28,7 +28,7 @@ List<GrafikenItem> cakeData = [
     imageTitle: "Angi´s Yummy Burger",
     imageSubTitle: "Delish vegan burger that tastes like heaven",
     imagePrice: "₳ 13.99",
-    imageLikes: "30",
+    imageLikes: "❤️ 30",
     imageDescription:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     imageIngredients: "Lecker",

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-//import 'package:jp_app/repositories/grafiken_data.dart';
-
 class CakeContainerWidget extends StatelessWidget {
   final Function()? onTap;
 
-  const CakeContainerWidget({super.key, required this.onTap});
+  const CakeContainerWidget({
+    super.key,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,36 @@ class CakeContainerWidget extends StatelessWidget {
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
           child: const Padding(
             padding: EdgeInsets.all(13.0),
-            // child: Column(
+
+            child: Column(
+              children: [
+                Image(
+                  image: AssetImage("assets/grafiken/ice_cream_stick_3D.png"),
+                ),
+                Text(
+                  "Strewberry ice Cream",
+                  style: TextStyle(color: Colors.black),
+                ),
+                Text(
+                  "Ali´s Choko Ice",
+                  style: TextStyle(color: Colors.white),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "₳ 8.99",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    SizedBox(width: 60),
+                    Text(
+                      "❤️ 30",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+
             //   crossAxisAlignment: CrossAxisAlignment.start,
             //   children: [
             //     Transform.scale(
