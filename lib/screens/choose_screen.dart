@@ -166,6 +166,7 @@ class _ChooseScreenState extends State<ChooseScreen> {
                               DrawerScreen(grafikenItem: cakeData[index]),
                         );
                       },
+                      grafikenItem: cakeData[index],
                     );
                   },
                 ),

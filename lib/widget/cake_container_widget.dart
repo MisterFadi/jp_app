@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:jp_app/models/grafiken_item_class.dart';
 
 class CakeContainerWidget extends StatelessWidget {
   final Function()? onTap;
+  final GrafikenItem grafikenItem;
 
   const CakeContainerWidget({
     super.key,
     required this.onTap,
+    required this.grafikenItem,
   });
 
   @override
@@ -24,84 +27,44 @@ class CakeContainerWidget extends StatelessWidget {
                 Color.fromARGB(255, 155, 170, 236),
                 Color.fromARGB(218, 129, 101, 171)
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-          child: const Padding(
-            padding: EdgeInsets.all(13.0),
-
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image(
-                  image: AssetImage("assets/grafiken/ice_cream_stick_3D.png"),
+                  image: AssetImage(grafikenItem.imagePath),
                 ),
                 Text(
-                  "Strewberry ice Cream",
-                  style: TextStyle(color: Colors.black),
+                  grafikenItem.imageTitle,
+                  style: const TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Ali´s Choko Ice",
-                  style: TextStyle(color: Colors.white),
+                  grafikenItem.imageSubTitle,
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 170, 162, 162), fontSize: 11),
                 ),
+                const SizedBox(height: 4),
                 Row(
                   children: [
                     Text(
-                      "₳ 8.99",
-                      style: TextStyle(color: Colors.white),
+                      grafikenItem.imagePrice,
+                      style: const TextStyle(color: Colors.white),
                     ),
-                    SizedBox(width: 60),
+                    const SizedBox(width: 60),
+                    const Icon(Icons.favorite_border_sharp,
+                        size: 14, color: Color.fromARGB(255, 170, 162, 162)),
+                    const SizedBox(width: 2),
                     Text(
-                      "❤️ 30",
-                      style: TextStyle(color: Colors.white),
+                      grafikenItem.imageLikes,
+                      style: const TextStyle(
+                          color: Color.fromARGB(255, 170, 162, 162)),
                     ),
                   ],
                 ),
               ],
             ),
-
-            //   crossAxisAlignment: CrossAxisAlignment.start,
-            //   children: [
-            //     Transform.scale(
-            //       scale: 1,
-            //       child: Image.asset(cakeData[index].imagePath),
-            //     ),
-            //     const SizedBox(height: 5),
-            //     Text(
-            //       grafikenItem.imageTitle,
-            //       style: const TextStyle(
-            //         fontWeight: FontWeight.bold,
-            //         color: Colors.white,
-            //         fontSize: 16,
-            //       ),
-            //     ),
-            //     const SizedBox(height: 1),
-            //     Text(
-            //       grafikenItem.imageSubTitle,
-            //       style: const TextStyle(
-            //           color: Colors.white,
-            //           fontSize: 10,
-            //           fontWeight: FontWeight.w400),
-            //     ),
-            //     const SizedBox(height: 10),
-            //     Row(
-            //       children: [
-            //         const Text(
-            //           grafikenItem.imagePrice,
-            //           textAlign: TextAlign.start,
-            //           style: TextStyle(
-            //               color: Colors.white,
-            //               fontSize: 15,
-            //               fontWeight: FontWeight.w400),
-            //         ),
-            //         const Text(
-            //           grafikenItem.imageLikes,
-            //           textAlign: TextAlign.end,
-            //           style: TextStyle(
-            //               color: Colors.white,
-            //               fontSize: 15,
-            //               fontWeight: FontWeight.w400),
-            //         ),
-            //       ],
-            //     ),
-            //   ],
-            // ),
           ),
         ),
       ),

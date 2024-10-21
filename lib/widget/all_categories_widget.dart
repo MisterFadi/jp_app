@@ -8,16 +8,18 @@ class AllCategoriesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          _buildCategoryButton("🍽️ All categories", width: 150, height: 38),
-          _buildSaltyButton("Salty", width: 90, height: 38),
-          _buildCategoryButton("Sweet", width: 90, height: 38),
-          _buildCategoryButton("Drinks", width: 90, height: 38),
-        ],
+    return Builder(
+      builder: (context) => SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            _buildCategoryButton("🍽️ All categories", width: 150, height: 38),
+            _buildSaltyButton("Salty", width: 90, height: 38),
+            _buildCategoryButton("Sweet", width: 90, height: 38),
+            _buildCategoryButton("Drinks", width: 90, height: 38),
+          ],
+        ),
       ),
     );
   }

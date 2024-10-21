@@ -2,7 +2,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:jp_app/buttons/add_to_order_price_button%20.dart';
+import 'package:jp_app/buttons/add_to_order_price_button.dart';
 import 'package:jp_app/models/grafiken_item_class.dart';
 
 class DrawerScreen extends StatelessWidget {
@@ -88,15 +88,16 @@ class DrawerScreen extends StatelessWidget {
                         thickness: 0.5,
                       ),
                       const SizedBox(height: 10),
-                      const Row(
+                      Row(
                         children: [
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Ingredients",
-                                    style: TextStyle(color: Colors.white)),
-                                SizedBox(height: 8),
-                                Row(
+                                Text(grafikenItem.imageDescription,
+                                    style:
+                                        const TextStyle(color: Colors.white)),
+                                const SizedBox(height: 8),
+                                const Row(
                                   children: [
                                     Icon(Icons.abc, color: Colors.white),
                                     SizedBox(width: 4),
@@ -108,8 +109,8 @@ class DrawerScreen extends StatelessWidget {
                                   ],
                                 )
                               ]),
-                          Expanded(child: SizedBox()),
-                          Column(
+                          const Expanded(child: SizedBox()),
+                          const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text("Reviews",
